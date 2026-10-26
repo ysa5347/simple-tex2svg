@@ -9,8 +9,10 @@ Everything runs in the browser. MathJax renders the formulas to SVG, and the fil
 ```bash
 npm install
 npm run dev      # http://localhost:5173
-npm run build    # static files in dist/
+npm run build    # static files in build/
 ```
+
+A prebuilt copy is committed in `build/`. Serve that directory with any static server, e.g. `npx serve build`. It cannot be opened directly as `file://`, because browsers block ES module scripts there.
 
 The clipboard API only works in a secure context (`localhost` or HTTPS).
 
